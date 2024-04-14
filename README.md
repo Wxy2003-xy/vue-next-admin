@@ -83,9 +83,9 @@ cnpm run build
 
 #### 💯 学习交流加 QQ 群
 
-> 1 - 4 交流群已满，请加 vue-next-admin 交流群 5
+> 1 - 4 交流群已满，请加以下群号，感谢老哥们支持！
 
-群号：556254895
+群号：772322995
 
 其它交流群请查看文档首页 [vueNextAdmin 解疑问](https://lyt-top.gitee.io/vue-next-admin-doc-preview/)
 
