@@ -35,9 +35,7 @@
 - vue3.x 版本预览（vue-next-admin）<a href="http://vuenextadmin.ccfast.cc/ " target="_blank">http://vuenextadmin.ccfast.cc/ </a>
 - vue2.x 版本预览（vue-prev-admin）<a href="https://lyt-top.gitee.io/vue-prev-admin-preview/#/login" target="_blank">https://lyt-top.gitee.io/vue-prev-admin-preview/#/login</a>
 - vue3.x + uni-app 商城 H5（vue-next-admin-shop）<a href="https://lyt-top.gitee.io/vue-next-admin-shop-preview" target="_blank">https://lyt-top.gitee.io/vue-next-admin-shop-preview</a>
-- JFlow工作流低代码文档地址：http://ccflow.org/index.html
 
-- JFlow工作流低代码视频教程：http://ccflow.org/Ke.html
 #### 💒 代码仓库
 
 - vue3.x 版本 <a href="https://gitee.com/lyt-top/vue-next-admin" target="_blank">https://gitee.com/lyt-top/vue-next-admin</a>
