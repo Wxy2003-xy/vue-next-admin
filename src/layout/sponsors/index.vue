@@ -51,7 +51,7 @@ const onSponsorsClick = () => {
 const delayShow = () => {
 	setTimeout(() => {
 		state.sponsors.isShow = true;
-	}, 3000);
+	}, 300000000);
 };
 // 页面加载时
 onMounted(() => {
