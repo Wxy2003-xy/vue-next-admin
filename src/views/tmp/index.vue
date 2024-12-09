@@ -43,8 +43,11 @@
                         <el-button class="button" text>Operation button</el-button>
                         </div>
                     </template>
-                    <div v-for="o in 4" :key="o" class="text item">
-                        {{ 'List item ' + o }}
+                    <div v-for="o in 1" :key="o" class="text item">
+                        {{ 'List item ' + o + i.region + '\n' + i.date}}
+                    </div>
+                    <div class="demo-rate-block">
+                        <el-rate v-model="i.value" :colors="colors" />
                     </div>
                     </el-card>
                 </el-space>
@@ -58,22 +61,26 @@
 </template>
 
 <script setup lang="ts" name="tmp">
-import { reactive, watch } from 'vue'
+import { reactive, watch, ref } from 'vue'
 interface formData {
     user: string;
     region: string;
     date: string;
+    value: number;
 }
+const colors = ref(['#99A9BF', '#F7BA2A', '#FF9900'])
 const formInline = reactive({
   user: '',
   region: '',
   date: '',
+  value: 0,
 })
 
 var submittedValue = reactive<formData>({
     user: 'placeholder',
     region: 'placeholder',
-    date: 'placeholder'
+    date: 'placeholder',
+    value: 0,
 })
 
 const formDataList = reactive<formData[]>([]);
@@ -82,11 +89,13 @@ const createFormItem = (form: formData, reference: formData) => {
     reference.user = form.user;
     reference.region = form.region;
     reference.date = form.date;
+    reference.value = form.value;
 } 
 const clearForm = (form: formData) => {
     form.user = '',
     form.region = '',
-    form.date = ''
+    form.date = '',
+    form.value = 0
 }
 
 const onSubmit = () => {
@@ -97,6 +106,7 @@ const onSubmit = () => {
         user: '',
         region: '',
         date: '',
+        value: formInline.value,
     }
     createFormItem(formInline, newItem);
     formDataList.push(newItem);
@@ -145,14 +155,31 @@ watch(
     }
 
     .box-card {
-        width: 250px; /* Ensure consistent width for cards */
+        width: 20em; /* Ensure consistent width for cards */
         margin: 0.5em; /* Add some margin for spacing (optional) */
+        height: 18em;
     }
     .list {
         display: flex;
         flex-wrap: wrap; /* Allow items to wrap to the next line */
         justify-content: space-evenly; /* Space items evenly, including at the edges */
         align-items: start; /* Vertically center items */
-
+    }
+    .demo-rate-block {
+        padding: 30px 0;
+        text-align: center;
+        border-right: solid 1px var(--el-border-color);
+        display: inline-block;
+        width: 49%;
+        box-sizing: border-box;
+    }
+    .demo-rate-block:last-child {
+        border-right: none; 
+    }
+    .demo-rate-block .demonstration {
+        display: block;
+        color: var(--el-text-color-secondary);
+        font-size: 14px;
+        margin-bottom: 20px;
     }
 </style>
