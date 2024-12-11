@@ -1,0 +1,7 @@
+./swaks --auth \
+--server smtp.mailgun.org \
+--au postmaster@sandboxc98307a1dbbb4e1a9d61d5eff06f68b7.mailgun.org \
+--ap 12345678SSdlhlhello! \
+--to e1156628@u.nus.edu \
+--h-Subject: "Hello" \
+--body 'Testing some Mailgun awesomness!'
